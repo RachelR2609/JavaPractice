@@ -22,12 +22,12 @@ public class TicTacToe {
 		
 		
 		//Read player inputs for position on board 
-		// Looping this runs forever
+		// Looping this runs forever unit it reaches 'break'
 		while(true) {
 			Scanner scan = new Scanner(System.in);
 			System.out.println("Enter your placement (1-9)");
 			int playerPos = scan.nextInt();
-			while(playerPosition.contains(playerPos) || cpuPosition.contains(playerPosition)) {
+			while(playerPosition.contains(playerPos) || cpuPosition.contains(playerPosition)) { //if true, then position on board is already taken
 				System.out.println("Position not available! Choose a different position");
 				playerPos = scan.nextInt();
 				scan.close();
@@ -39,7 +39,7 @@ public class TicTacToe {
 			//Random placement for 'cpu' 
 			Random rand = new Random();
 			int cpuPos = rand.nextInt(9) + 1; // random number from 1 to 9
-			while(playerPosition.contains(cpuPos) || cpuPosition.contains(cpuPosition)) {
+			while(playerPosition.contains(cpuPos) || cpuPosition.contains(cpuPosition)) {//if true, then position on board is already taken
 			 cpuPos = rand.nextInt(9) + 1;
 			}
 			placePiece(gameBoard, cpuPos, "cpu");
@@ -54,7 +54,7 @@ public class TicTacToe {
 		}
 	}
 	
-	
+	//Method to print out game board on console 
 	public static void printGameBoard(char [][] gameBoard) {
 		for(char [] row : gameBoard) {
 			for(char c : row) {
@@ -112,7 +112,7 @@ public class TicTacToe {
 		}
 	}
 	
-	//Method to check is there is a winner after each iteration of game
+	//Method to check if there is a winner after each iteration of game
 	public static String checkWinner() {
 		//Different win cases 
 		List topRow = Arrays.asList(1, 2, 3);

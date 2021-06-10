@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class ConstantOrVowel {
 	public static void main(String[] args) {
+		//Taking a String from user 
+		//and feeding it into constantOrVowel method 
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Please enter a letter?");
 		String s = scan.next();

@@ -1,4 +1,4 @@
-
+// Program to print out the contents of a boolean array 
 public class BooleanArrays {
 	public static void main(String[] args) {
 		boolean[][] boolArray = {{true, false, true},

@@ -7,7 +7,7 @@ public class InputEquals {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		while(true) {
+		while(true) { //Continuous loop
 			int num1;
 			int num2;
 			int num3;
@@ -33,7 +33,6 @@ public class InputEquals {
 				System.out.println("You can only type a number value!" );
 				scan.nextLine(); // without this, there would be an infinite loop
 			} finally {
-				scan. close();
 			}
 		}
 		

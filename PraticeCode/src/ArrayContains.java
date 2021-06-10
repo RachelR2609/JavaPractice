@@ -1,4 +1,4 @@
-//Here we try to find if an item x, can be found in a given array 
+//Here we try to find an item x in a given array 
 // using user input 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class ArrayContains {
 	
 	static boolean result = true;
 	
-	public static boolean itemFound(int [] array, int item) {  //method taking two parameters and returning a boolean value
+	public static boolean itemFound(int [] array, int item) {  //method for taking two parameters and returning a boolean value
 		for(int i = 0; i < array.length; i ++) {
 			if(item == array[i]) {
 				return true;
